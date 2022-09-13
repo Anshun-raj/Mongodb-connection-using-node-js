@@ -4,10 +4,10 @@ var mongoose=require('mongoose');
 var User=require('./users1');
 mongoose.connect('mongodb+srv://myData:ynzHxrU4i0dCKsH0@cluster0.njz111h.mongodb.net/myFolder?retryWrites=true&w=majority',
   {useNewUrlParser:true},
-  {useUnifiedTopology:true});
-// ).then(()=>{
-//       console.log('db connection done')
-// });
+  {useUnifiedTopology:true}
+).then(()=>{
+      console.log('db connection done')
+});
 User.find({},function(err,data){
    if(err)
    {
